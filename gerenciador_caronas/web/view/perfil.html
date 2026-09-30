@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CaronaU — meu perfil</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="topo">
+    <span class="marca">CaronaU</span>
+    <nav class="menu">
+      <a href="index.html" class="menu-item">Home</a>
+      <a href="cadastrar-carona.html" class="menu-item">Oferecer carona</a>
+      <a href="perfil.html" class="menu-item ativo">Meu perfil</a>
+    </nav>
+    <div id="area-usuario" class="usuario-logado"></div>
+  </header>
+
+  <main class="conteudo">
+    <h1>Meu perfil</h1>
+
+    <div id="card-perfil" class="card-perfil">
+      <p class="mensagem-status">Carregando...</p>
+    </div>
+
+    <h1>Minhas solicitações</h1>
+
+    <div class="abas-solicitacoes">
+      <button class="aba ativa" data-filtro="TODAS">Todas</button>
+      <button class="aba" data-filtro="PENDENTE">Pendentes</button>
+      <button class="aba" data-filtro="ACEITA">Aceitas</button>
+      <button class="aba" data-filtro="RECUSADA">Recusadas</button>
+      <button class="aba" data-filtro="CANCELADA">Canceladas</button>
+    </div>
+
+    <ul id="lista-solicitacoes" class="lista-solicitacoes"></ul>
+
+    <p id="estado-vazio-solicitacoes" class="estado-vazio" hidden>
+      Nenhuma solicitação encontrada para esse filtro.
+    </p>
+
+    <h1 class="secao-titulo">Caronas que eu ofereço</h1>
+
+    <ul id="lista-caronas-oferecidas" class="lista-caronas"></ul>
+
+    <p id="estado-vazio-oferecidas" class="estado-vazio" hidden>
+      Você ainda não ofereceu nenhuma carona.
+    </p>
+
+    <h1 class="secao-titulo">Solicitações recebidas</h1>
+
+    <ul id="lista-solicitacoes-recebidas" class="lista-solicitacoes"></ul>
+
+    <p id="estado-vazio-recebidas" class="estado-vazio" hidden>
+      Nenhuma solicitação recebida até o momento.
+    </p>
+
+    <p id="mensagem-status" class="mensagem-status" hidden></p>
+  </main>
+
+  <script src="js/validacao.js"></script>
+  <script src="js/perfil.js"></script>
+</body>
+</html>

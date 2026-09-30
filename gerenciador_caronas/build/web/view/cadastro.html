@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CaronaU — criar conta</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="topo"><span class="marca">CaronaU</span></header>
+
+  <main class="pagina-auth">
+    <div class="card-auth">
+      <h1>Criar conta</h1>
+      <p class="subtitulo">Cadastre-se para buscar e oferecer caronas.</p>
+
+      <p id="mensagem-geral" class="mensagem-geral" hidden></p>
+
+      <form id="form-cadastro" novalidate>
+        <div class="campo">
+          <label for="nome">Nome completo</label>
+          <input type="text" id="nome" name="nome" required>
+          <div class="campo-erro" id="erro-nome"></div>
+        </div>
+
+        <div class="campo">
+          <label for="cpf">CPF</label>
+          <input type="text" id="cpf" name="cpf" placeholder="000.000.000-00" inputmode="numeric" required>
+          <div class="campo-erro" id="erro-cpf"></div>
+        </div>
+
+        <div class="campo">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" required>
+          <div class="campo-erro" id="erro-email"></div>
+        </div>
+
+        <div class="campo">
+          <label for="telefone">Telefone</label>
+          <input type="text" id="telefone" name="telefone" placeholder="(00) 00000-0000" inputmode="numeric" required>
+          <div class="campo-erro" id="erro-telefone"></div>
+        </div>
+
+        <div class="campo">
+          <label for="senha">Senha</label>
+          <input type="password" id="senha" name="senha" required>
+          <div class="campo-erro" id="erro-senha"></div>
+        </div>
+
+        <div class="campo">
+          <label for="confirmarSenha">Confirmar senha</label>
+          <input type="password" id="confirmarSenha" name="confirmarSenha" required>
+          <div class="campo-erro" id="erro-confirmarSenha"></div>
+        </div>
+
+        <button type="submit" class="botao-principal">Criar conta</button>
+      </form>
+
+      <p class="rodape-auth">Já tem conta? <a href="login.html">Entrar</a></p>
+    </div>
+  </main>
+
+  <script src="js/validacao.js"></script>
+  <script src="js/cadastro.js"></script>
+</body>
+</html>

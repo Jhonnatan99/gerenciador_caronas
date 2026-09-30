@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CaronaU — buscar caronas</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="topo">
+    <span class="marca">CaronaU</span>
+    <nav class="menu">
+      <a href="index.html" class="menu-item ativo">Home</a>
+      <a href="cadastrar-carona.html" class="menu-item">Oferecer carona</a>
+      <a href="perfil.html" class="menu-item">Meu perfil</a>
+    </nav>
+    <div id="area-usuario" class="usuario-logado"></div>
+  </header>
+
+  <main class="conteudo">
+
+    <section class="busca">
+      <h1>Para onde você vai hoje?</h1>
+
+      <form id="form-busca" class="form-busca">
+        <div class="campo">
+          <label for="origem">Origem</label>
+          <input type="text" id="origem" name="origem" placeholder="Ex: Campus Central">
+        </div>
+
+        <div class="campo">
+          <label for="destino">Destino</label>
+          <input type="text" id="destino" name="destino" placeholder="Ex: Terminal Rodoviário">
+        </div>
+
+        <button type="submit" class="botao-buscar">Buscar</button>
+      </form>
+    </section>
+
+    <section class="resultados">
+      <div class="resultados-cabecalho">
+        <h2>Caronas disponíveis</h2>
+        <span id="contador-resultados" class="contador"></span>
+      </div>
+
+      <ul id="lista-caronas" class="lista-caronas"></ul>
+
+      <p id="estado-vazio" class="estado-vazio" hidden>
+        Nenhuma carona encontrada para essa busca. Tente outra origem ou destino.
+      </p>
+
+      <p id="mensagem-status" class="mensagem-status" hidden></p>
+    </section>
+
+  </main>
+
+  <script src="js/validacao.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
